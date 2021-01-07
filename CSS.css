@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* { box-sizing: border-box; }
+
+@keyframes color-change { /*Makes Background and Text change colour */
+	0% {
+		background-color: #FFB1B0; /* Red */
+	}
+	16.67% {
+		background-color: #FFDFBE; /* Orange */
+	}
+	33.33% {
+		background-color: #FFFFBF; /* Yellow */
+	}
+	50% {
+		background-color: #B4F0A7; /* Green */
+	}
+	66.67% {
+		background-color: #A9D1F7; /* Blue */
+	}
+	83.33% {
+		background-color: #CC99FF; /* Purple */
+	}
+	100% {
+		background-color: #FFB1B0; /* Red */
+	}
+}
+
+body, html { /* Afects Everything as a Whole */
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	animation: 40000ms ease-in-out infinite color-change; /* Applying the Colour-Change */
+}
+
+.text { /*Affects All Text */
+	animation: 40000ms ease-in-out infinite color-change; /* Applying the Colour-Change */
+	color: black;
+}
+
+.imhero { /* Webpage Hero Image */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+}
+
+.imbody { /* Body Parallax Scrolling */
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 70%;
+}
+
+section, footer {
+	margin: 0;
+	padding: 50px;
+}
+
+nav { /*Navigation Bar */
+	position: fixed; /* The Navigation Bar will not Move */
+	top: 0;
+	margin-bottom: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+
+nav > ul { /* To make sure that there isn't extra background */
+	padding: 0;
+	margin: 0;
+}
+
+ul > li {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+
+nav > ul > li { /* To ensure that the buttons are displayed horizontally. */
+	display: inline-block;
+	margin: 0;
+}
+
+nav > ul > li > ul { /* Drop-down Menu List */
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0;
+	list-style: none;
+	position: fixed;
+	display: none;
+	margin: 0;
+}
+
+nav > ul > li > a, nav > ul > li > ul > li > a { /* All the links in the navigation bar */
+	padding: 20px;
+	margin: 0;
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+}
+
+nav > ul > li:hover { /* Hovering over a part of the navigation bar */
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav > ul > li > ul > li:hover { /* Hovering over a part of the drop-down menu */
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav > ul > li:hover > ul { /* To display the drop-down menu if you hover over the navigation bar */
+	display: block;
+}
+
+h1 { /* Heading 1 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 10px;
+	vertical-align: bottom;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 48px;
+	font-weight: 100;
+}
+
+h2 { /* Heading 2 */
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 24px;
+	font-weight: 100;
+}
+
+h3 { /* Heading 3 */
+	font-family: 'Abril Fatface', cursive;
+	font-weight: 100;
+}
+
+p { /* Paragraphs */
+	text-align: justify;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+}
+
+footer {
+	text-align: center;
+}
+
+div { /* The separate 3 sections of the footer */
+	padding: 0 25px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+footer > ul > li > a { /* The links in the footer */
+	color: black;
+}
